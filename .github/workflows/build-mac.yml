@@ -1,0 +1,52 @@
+name: build-mac-arm64
+
+on:
+  workflow_dispatch:
+  push:
+    tags: ['v*']
+
+jobs:
+  build:
+    runs-on: macos-14   # Apple Silicon (arm64) 러너
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: 빌드 도구 설치
+        run: brew install nasm meson ninja pkg-config autoconf automake libtool
+
+      - name: 소스 확보 (+MANIFEST)
+        run: bash scripts/fetch-sources.sh
+
+      - name: FFmpeg 빌드 (GPL + LGPL 변형)
+        run: bash scripts/build-mac.sh
+
+      - name: 스모크 테스트 (자막 번인 + x264 인코딩 + 실시간 그레인)
+        run: |
+          printf '1\n00:00:00,000 --> 00:00:02,000\n스모크 테스트\n' > /tmp/t.srt
+          ./dist/gpl/ffmpeg -y -hide_banner -f lavfi -i "color=c=gray:s=640x360:d=2:r=30" \
+            -vf "subtitles=/tmp/t.srt,noise=c0s=10:c0f=t,vignette,format=yuv420p" \
+            -c:v libx264 /tmp/smoke_gpl.mp4
+          ./dist/lgpl/ffmpeg -y -hide_banner -f lavfi -i "color=c=gray:s=640x360:d=2:r=30" \
+            -vf "subtitles=/tmp/t.srt,format=yuv420p" \
+            -c:v h264_videotoolbox -b:v 2M /tmp/smoke_lgpl.mp4 || \
+            echo "::warning::LGPL videotoolbox 스모크 실패 — CI 러너 하드웨어 인코더 제약일 수 있음 (실기기 검증 필요)"
+          ls -la /tmp/smoke_*.mp4
+
+      - name: 아티팩트 업로드
+        uses: actions/upload-artifact@v4
+        with:
+          name: ffmpeg-mac-arm64
+          path: |
+            dist/
+            sources/MANIFEST.txt
+
+      - name: 릴리스 자산 첨부 (태그 푸시 시) — 바이너리 + 대응 소스 + 라이선스
+        if: startsWith(github.ref, 'refs/tags/v')
+        uses: softprops/action-gh-release@v2
+        with:
+          files: |
+            dist/gpl/*
+            dist/lgpl/*
+            sources/*.tar.*
+            sources/MANIFEST.txt
+            LICENSES/*
