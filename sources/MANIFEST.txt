@@ -1,6 +1,6 @@
 # gentube-ffmpeg corresponding source manifest
-# 확보일: 2026-07-06T16:50:49Z
-# versions.env: FFMPEG=8.1 X264=stable EXPAT=2.6.4 FREETYPE=2.13.3 FRIBIDI=1.0.16 HARFBUZZ=10.1.0 FONTCONFIG=2.15.0 LIBUNIBREAK=6.1 LIBASS=0.17.3
+# 확보일: 2026-07-06T17:48:49Z
+# versions.env: FFMPEG=8.1 X264=stable LAME=3.100 EXPAT=2.6.4 FREETYPE=2.13.3 FRIBIDI=1.0.16 HARFBUZZ=10.1.0 FONTCONFIG=2.15.0 LIBUNIBREAK=6.1 LIBASS=0.17.3
 
 a695629dae047055b37d50a0ff4776d1d45d0a4c842cf4ccee158441f55ff7ee  expat-2.6.4.tar.xz
 b072aed6871998cce9b36e7774033105ca29e33632be5b6347f3206898e0756a  ffmpeg-8.1.tar.xz
@@ -8,6 +8,7 @@ b072aed6871998cce9b36e7774033105ca29e33632be5b6347f3206898e0756a  ffmpeg-8.1.tar
 0550350666d427c74daeb85d5ac7bb353acba5f76956395995311a9c6f063289  freetype-2.13.3.tar.xz
 1b1cde5b235d40479e91be2f0e88a309e3214c8ab470ec8a2744d82a5a9ea05c  fribidi-1.0.16.tar.xz
 6ce3520f2d089a33cef0fc48321334b8e0b72141f6a763719aaaecd2779ecb82  harfbuzz-10.1.0.tar.xz
+ddfe36cab873794038ae2c1210557ad34857a4b6bdc515785d1da9e175b1da1e  lame-3.100.tar.gz
 eae425da50f0015c21f7b3a9c7262a910f0218af469e22e2931462fed3c50959  libass-0.17.3.tar.xz
 cc4de0099cf7ff05005ceabff4afed4c582a736abc38033e70fdac86335ce93f  libunibreak-6.1.tar.gz
 740126cb48549ca4e2f09b4ae13beed592d5b54744044e38f28662fd96d0ba56  x264-stable.tar.bz2
@@ -18,6 +19,7 @@ cc4de0099cf7ff05005ceabff4afed4c582a736abc38033e70fdac86335ce93f  libunibreak-6.
 2617564 freetype-2.13.3.tar.xz
 1098260 fribidi-1.0.16.tar.xz
 17922136 harfbuzz-10.1.0.tar.xz
+1524133 lame-3.100.tar.gz
 442744 libass-0.17.3.tar.xz
 855733 libunibreak-6.1.tar.gz
 846774 x264-stable.tar.bz2
