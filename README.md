@@ -30,7 +30,7 @@ x265/vidstab/xvid 등 미사용 GPL 컴포넌트는 제외 (기존 서드파티 
 
 | 이 리포 릴리스 | FFmpeg | GenTube 버전 | 비고 |
 |---|---|---|---|
-| (첫 릴리스 예정) | 8.1 | 2.x | mac arm64 |
+| [v8.1-1](https://github.com/web-brain/gentube-ffmpeg/releases/tag/v8.1-1) | 8.1 | 2.x | mac arm64, gpl+lgpl, libunibreak 포함. 2026-07-07 gentube 반영 |
 
 ## 사용법
 
