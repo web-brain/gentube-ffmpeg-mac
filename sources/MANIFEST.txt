@@ -1,0 +1,21 @@
+# gentube-ffmpeg corresponding source manifest
+# 확보일: 2026-07-06T11:37:02Z
+# versions.env: FFMPEG=8.1 X264=stable EXPAT=2.6.4 FREETYPE=2.13.3 FRIBIDI=1.0.16 HARFBUZZ=10.1.0 FONTCONFIG=2.15.0 LIBASS=0.17.3
+
+a695629dae047055b37d50a0ff4776d1d45d0a4c842cf4ccee158441f55ff7ee  expat-2.6.4.tar.xz
+b072aed6871998cce9b36e7774033105ca29e33632be5b6347f3206898e0756a  ffmpeg-8.1.tar.xz
+63a0658d0e06e0fa886106452b58ef04f21f58202ea02a94c39de0d3335d7c0e  fontconfig-2.15.0.tar.xz
+0550350666d427c74daeb85d5ac7bb353acba5f76956395995311a9c6f063289  freetype-2.13.3.tar.xz
+1b1cde5b235d40479e91be2f0e88a309e3214c8ab470ec8a2744d82a5a9ea05c  fribidi-1.0.16.tar.xz
+6ce3520f2d089a33cef0fc48321334b8e0b72141f6a763719aaaecd2779ecb82  harfbuzz-10.1.0.tar.xz
+eae425da50f0015c21f7b3a9c7262a910f0218af469e22e2931462fed3c50959  libass-0.17.3.tar.xz
+740126cb48549ca4e2f09b4ae13beed592d5b54744044e38f28662fd96d0ba56  x264-stable.tar.bz2
+
+486732 expat-2.6.4.tar.xz
+11702216 ffmpeg-8.1.tar.xz
+1447820 fontconfig-2.15.0.tar.xz
+2617564 freetype-2.13.3.tar.xz
+1098260 fribidi-1.0.16.tar.xz
+17922136 harfbuzz-10.1.0.tar.xz
+442744 libass-0.17.3.tar.xz
+846774 x264-stable.tar.bz2
